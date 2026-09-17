@@ -1,0 +1,19 @@
+{
+  "default": {
+    "paths": ["features/**/*.feature"],
+    "require": [
+      "step-definitions/**/*.ts",
+      "support/**/*.ts"
+    ],
+    "requireModule": [
+      "tsx/cjs"
+    ],
+    "format": [
+      "summary",
+      "progress-bar",
+      "html:cucumber-report.html",
+      "json:cucumber-report.json"
+    ],
+    "parallel": 1
+  }
+}
