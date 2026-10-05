@@ -34,7 +34,7 @@ export class CartPage{
 
     async verifyCartItems():Promise<boolean>
     {
-        const count = await this.cartItems.count();
-        return count === 2;
+       const itemsVisible = await cartPage.verifyCartItems();
+       expect(itemsVisible).toBeTruthy();
     }
 }
