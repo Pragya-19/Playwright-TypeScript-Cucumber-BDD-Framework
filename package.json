@@ -1,16 +1,11 @@
 {
   "name": "cucumber-framework-playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "End-to-end BDD automation framework using Playwright, TypeScript and Cucumber.",
   "main": "index.js",
   "scripts": {
-  "scripts": {
-  "test": "cucumber-js \"features/**/*.feature\" --require-module tsx/cjs --require \"step-definitions/**/*.ts\" --require \"support/**/*.ts\" --format progress --format html:cucumber-report.html",
-  "report": "echo Cucumber HTML report is generated automatically during npm test"
-}
-}
-,
-
+    "test": "cucumber-js \"features/**/*.feature\" --require-module tsx/cjs --require \"step-definitions/**/*.ts\" --require \"support/**/*.ts\" --format progress --format html:cucumber-report.html"
+  },
   "dependencies": {
     "@cucumber/cucumber": "^10.0.1",
     "@playwright/test": "^1.44.0",
@@ -22,5 +17,4 @@
     "cucumber-html-reporter": "^7.2.0",
     "tsx": "^4.23.13"
   }
-
 }
