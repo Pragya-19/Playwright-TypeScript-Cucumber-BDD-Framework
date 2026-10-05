@@ -28,13 +28,11 @@ When('User clicks the Continue button', async()=>{
 Then('User should see the checkout overview verification screen', async () =>  {
     await expect(page).toHaveURL(/.*checkout-step-two.html/);
 });
-When('User clicks on the Finish button', async () =>  {
+When('User clicks the Finish button', async () => {
     await checkoutPage.clickFinish();
-
 });
 
-Then('The order confirmation text {string} should be visible',async(successMessage:string)=>{
-
-    const confirmationText  = await checkoutPage.getConfirmationText();
+Then('the order confirmation text {string} should be visible', async (successMessage: string) => {
+    const confirmationText = await checkoutPage.getConfirmationText();
     expect(confirmationText).toBe(successMessage);
 });
