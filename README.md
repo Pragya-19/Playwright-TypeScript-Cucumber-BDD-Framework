@@ -30,7 +30,7 @@ Playwright-TypeScript-Cucumber-BDD-Framework
 │   └── workflows/
 │       └── playwright.yml
 │
-├── data/
+├── data/testData.json
 │
 ├── docs/
 │   └── screenshots/
