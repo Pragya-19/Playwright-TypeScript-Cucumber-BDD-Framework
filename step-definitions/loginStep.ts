@@ -14,7 +14,6 @@ Given('the system is ready for authentication', async () => {
     await expect(page).toHaveTitle('Swag Labs');
 });
 
-});
 When ('User inputs a valid username {string}',async(username:string)=>{
     await loginPage.enterUsername(username);
 
