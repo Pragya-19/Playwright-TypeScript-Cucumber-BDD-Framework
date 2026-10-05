@@ -8,18 +8,18 @@ import { CartPage } from '../pages/cartPage';
 
 let cartPage:CartPage;
 
-When('User clicks on the shopping cart container container icon', async () =>  {
+When('User clicks on the shopping cart icon', async () => {
     cartPage = new CartPage(page);
     await cartPage.goToCart();
 });
-Then('User should navigate to the shopping cart item review page', async () =>  {
+
+Then('User should navigate to the shopping cart item review page', async () => {
     await expect(page).toHaveURL(/.*cart.html/);
 });
 
-Then('The cart list must display both selected items', async () => {
+Then('the cart list must display both selected items', async () => {
     const itemsVisible = await cartPage.verifyCartItems();
     expect(itemsVisible).toBeTruthy();
-
 });
 
 When('User clicks on the Checkout button', async () =>  {
