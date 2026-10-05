@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js && node reporter.js"
-  },
+  "test": "cucumber-js \"features/**/*.feature\" --require-module tsx/cjs --require \"step-definitions/**/*.ts\" --require \"support/**/*.ts\"",
+  "report": "node reporter.js"
+}
+,
+
   "dependencies": {
     "@cucumber/cucumber": "^10.0.1",
     "@playwright/test": "^1.44.0",
@@ -17,4 +20,5 @@
     "cucumber-html-reporter": "^7.2.0",
     "tsx": "^4.23.13"
   }
+
 }
