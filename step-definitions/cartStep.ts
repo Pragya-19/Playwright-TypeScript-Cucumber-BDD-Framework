@@ -18,8 +18,7 @@ Then('User should navigate to the shopping cart item review page', async () => {
 });
 
 Then('the cart list must display both selected items', async () => {
-    const itemsVisible = await cartPage.verifyCartItems();
-    expect(itemsVisible).toBeTruthy();
+    await expect(cartPage.cartItems).toHaveCount(2);
 });
 
 When('User clicks on the Checkout button', async () =>  {
