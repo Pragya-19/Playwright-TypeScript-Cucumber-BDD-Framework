@@ -7,11 +7,12 @@ let browser:Browser;
 let context:BrowserContext;
 export let page:Page;
 
-BeforeAll(async function(){
-    // Changing headless to false forces the UI window to open visually on your screen
+BeforeAll(async function () {
+    const isCI = process.env.CI === 'true';
+
     browser = await chromium.launch({
-        headless:false,
-        slowMo :1000
+        headless: isCI,
+        slowMo: isCI ? 0 : 1000
     });
 
 });
