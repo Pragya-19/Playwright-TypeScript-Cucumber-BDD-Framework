@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "cucumber-js \"features/**/*.feature\" --require-module tsx/cjs --require \"step-definitions/**/*.ts\" --require \"support/**/*.ts\"",
-  "report": "node reporter.js"
+  "scripts": {
+  "test": "cucumber-js \"features/**/*.feature\" --require-module tsx/cjs --require \"step-definitions/**/*.ts\" --require \"support/**/*.ts\" --format progress --format html:cucumber-report.html",
+  "report": "echo Cucumber HTML report is generated automatically during npm test"
+}
 }
 ,
 
