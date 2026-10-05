@@ -31,10 +31,5 @@ export class CartPage{
     async goToCart():Promise<void>{
         await this.cartIcon.click();
     }
-
-    async verifyCartItems():Promise<boolean>
-    {
-       const itemsVisible = await cartPage.verifyCartItems();
-       expect(itemsVisible).toBeTruthy();
-    }
+    
 }
