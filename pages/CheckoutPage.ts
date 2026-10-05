@@ -23,16 +23,16 @@ constructor(page:Page)
 
 }
 
-async fillFirstName(first:string):Promise<void>{
-    await this.firstNameInput.fill('firstName');
+async fillFirstName(first: string): Promise<void> {
+    await this.firstNameInput.fill(first);
 }
 
-async fillLastName(last:string):Promise<void>{
-    await this.lastNameInput.fill('lastName');
+async fillLastName(last: string): Promise<void> {
+    await this.lastNameInput.fill(last);
 }
 
-async fillPostalCode(zip:string):Promise<void>{
-    await this.postalCodeInput.fill('postalCode');
+async fillPostalCode(zip: string): Promise<void> {
+    await this.postalCodeInput.fill(zip);
 }
 
 async clickContinue():Promise<void>{
