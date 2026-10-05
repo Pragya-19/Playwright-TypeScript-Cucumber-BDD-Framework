@@ -17,19 +17,18 @@ Then('User should be redirected to the products inventory page',{timeout:20000},
     await expect(page).toHaveURL(/.*inventory.html/);
 });
 
-Then('The page header should display {string}',async(headerText:string)=>{
+Then('the page header should display {string}', async (headerText: string) => {
     await expect(inventoryPage.pageTitle).toHaveText(headerText);
-
 });
 
-When('User clicks the Add to Cart button for the backpack',async()=>{
+When('User adds the Sauce Labs Backpack to the cart', async () => {
     await inventoryPage.addBackpackToCart();
 });
 
-When('User clicks the Add to Cart button for the bike light',async()=>{
+When('User adds the Sauce Labs Bike Light to the cart', async () => {
     await inventoryPage.addBikeLightToCart();
-
 });
-Then('The shopping cart badge counter should show {string}',async(count:string)=>{
+
+Then('the shopping cart badge should show {string}', async (count: string) => {
     await expect(page.locator('.shopping_cart_badge')).toHaveText(count);
 });
