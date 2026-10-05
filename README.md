@@ -1,4 +1,5 @@
 # Playwright TypeScript Cucumber BDD Framework
+[![Cucumber BDD Tests](https://github.com/Pragya-19/Playwright-TypeScript-Cucumber-BDD-Framework/actions/workflows/playwright.yml/badge.svg)](https://github.com/Pragya-19/Playwright-TypeScript-Cucumber-BDD-Framework/actions/workflows/playwright.yml)
 
 End-to-end UI automation framework built using **Playwright, TypeScript, Cucumber BDD, Page Object Model, hooks, step definitions, and GitHub Actions CI/CD**.
 
@@ -107,3 +108,30 @@ Before / After Hooks
 External Test Data
 CI/CD Integration
 Git Version Control
+```
+
+## Execution Evidence
+
+### Local BDD Execution
+
+The end-to-end SauceDemo BDD workflow executes successfully with:
+
+- **1 scenario passed**
+- **21 steps passed**
+- **0 failed**
+- **0 undefined**
+
+![Cucumber Terminal Result](docs/screenshots/cucumber-terminal-21-steps-passed.png)
+
+### Cucumber HTML Report
+
+The Cucumber HTML report shows **100% scenario execution success**.
+
+![Cucumber HTML Report](docs/screenshots/cucumber-html-report-passed.png)
+
+### GitHub Actions CI
+
+The BDD suite also runs successfully in GitHub Actions on Ubuntu.
+
+![GitHub Actions CI](docs/screenshots/github-actions-bdd-ci-passed.png)
+
