@@ -10,8 +10,9 @@ Given ('User opens the Swag Labs login page',async ()=>{
     await loginPage.navigate();
 });
 
-Given ('The system is ready for authentication', async()=>{
-    await expect(page).toHaveTitle('Swag Labs')
+Given('the system is ready for authentication', async () => {
+    await expect(page).toHaveTitle('Swag Labs');
+});
 
 });
 When ('User inputs a valid username {string}',async(username:string)=>{
